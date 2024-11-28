@@ -20,7 +20,7 @@ RUN echo "MYSQL_USER: ${MYSQL_USER}" && \
     echo "MYSQL_DB: ${MYSQL_DB}"
 
 # Rodar o Maven para compilar o projeto
-RUN mvn package -DskipTests
+RUN mvn clean package
 
 # Copiar o arquivo JAR gerado para o diretório de destino
 COPY target/*.jar /app/app.jar
