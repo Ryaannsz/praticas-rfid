@@ -1,6 +1,12 @@
 # Usando a imagem base do OpenJDK 17 Alpine
 FROM openjdk:17-jdk-alpine
 
+ENV MYSQL_HOST=sql.freedb.tech
+ENV MYSQL_PORT=3306
+ENV MYSQL_USER=freedb_roote
+ENV MYSQL_PASSWORD=!tBrSuu3ajn%QfB
+ENV MYSQL_DB=freedb_praticasiot
+
 # Instalar Maven e outras dependências necessárias
 RUN apk update && apk add --no-cache maven
 
