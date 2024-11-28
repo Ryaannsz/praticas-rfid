@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.trabalho.praticasIot.PraticasIotApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.540 s -- in com.trabalho.praticasIot.PraticasIotApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.07 s -- in com.trabalho.praticasIot.PraticasIotApplicationTests
