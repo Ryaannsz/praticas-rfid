@@ -5,11 +5,15 @@ FROM openjdk:17-jdk-alpine
 RUN apk update && apk add --no-cache maven
 
 # Definir diretório de trabalho
-WORKDIR /app
+WORKDIR /usr/local/service
+# Verificar conteúdo do diretório de trabalho
+RUN ls -l /usr/local/service
 
 # Copiar o arquivo pom.xml e o diretório src
-COPY pom.xml /app
-COPY src /app
+COPY pom.xml /usr/local/service/pom.xml
+COPY src /usr/local/service/src
+
+RUN ls -l /usr/local/service  # Verificar se os arquivos foram copiados corretamente
 
 # Rodar o Maven para compilar o projeto
 RUN mvn package -DskipTests
