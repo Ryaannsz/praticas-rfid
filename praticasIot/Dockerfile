@@ -1,23 +1,10 @@
-
-FROM maven:3.9.4-openjdk-17-slim AS builder
-
-
+FROM maven:3.6.3-jdk-11-slim AS builder
 WORKDIR /app
-
-
 COPY . /app
-
-
-RUN mvn clean package -DskipTests
-
+RUN mvn clean package
 
 FROM openjdk:17-jdk-alpine
-
-
+RUN mkdir /app
 WORKDIR /app
-
-
 COPY --from=builder /app/target/*.jar /app/app.jar
-
-# Comando para rodar o aplicativo
 CMD ["java", "-jar", "/app/app.jar"]
