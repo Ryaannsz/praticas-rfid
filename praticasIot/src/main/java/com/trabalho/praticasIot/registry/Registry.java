@@ -1,6 +1,7 @@
 package com.trabalho.praticasIot.registry;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,14 +15,14 @@ public class Registry {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long code;
 	private String uuid;
-	private Date dtRegistry;
+	private Timestamp dtRegistry;
 	private boolean situation;
 	
-	public Registry(String uuid, Date dtRegistry, boolean situation) {
+	public Registry(RegistryRequestDTO data, Timestamp sqlHr) {
 
-		this.uuid=uuid;
-		this.dtRegistry=dtRegistry;
-		this.situation=situation;
+		this.uuid=data.uuid();
+		this.dtRegistry=sqlHr;
+		this.situation=data.situation();
 	}
 	
 	public Registry() {
@@ -36,11 +37,11 @@ public class Registry {
 		this.uuid = uuid;
 	}
 
-	public Date getDtRegistry() {
+	public Timestamp getDtRegistry() {
 		return dtRegistry;
 	}
 
-	public void setDtRegistry(Date dtRegistry) {
+	public void setDtRegistry(Timestamp dtRegistry) {
 		this.dtRegistry = dtRegistry;
 	}
 
