@@ -1,11 +1,11 @@
-com\trabalho\praticasIot\repository\UserRepository.class
-com\trabalho\praticasIot\identify\UserResponseDTO.class
-com\trabalho\praticasIot\repository\RegistryRepository.class
-com\trabalho\praticasIot\registry\RegistryResponseDTO.class
 com\trabalho\praticasIot\identify\UserRequestDTO.class
 com\trabalho\praticasIot\PraticasIotApplication.class
 com\trabalho\praticasIot\controllers\RegistryController.class
+com\trabalho\praticasIot\repository\UserRepository.class
 com\trabalho\praticasIot\registry\Registry.class
 com\trabalho\praticasIot\identify\User.class
+com\trabalho\praticasIot\identify\UserResponseDTO.class
+com\trabalho\praticasIot\repository\RegistryRepository.class
+com\trabalho\praticasIot\registry\RegistryResponseDTO.class
 com\trabalho\praticasIot\controllers\UserController.class
 com\trabalho\praticasIot\registry\RegistryRequestDTO.class
