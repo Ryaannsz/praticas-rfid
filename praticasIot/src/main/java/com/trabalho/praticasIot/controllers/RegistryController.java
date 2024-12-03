@@ -26,15 +26,7 @@ public class RegistryController {
 	@Autowired
 	RegistryRepository registryRepository;
 	
-	@CrossOrigin(origins="*", allowedHeaders = "*")
-	@GetMapping
-	public List<RegistryResponseDTO> getRegistry(){
-		
-		List<RegistryResponseDTO> listRegistry = registryRepository.findAll().stream().map(RegistryResponseDTO :: new).toList();
-		return listRegistry;
-		
-	}
-	@CrossOrigin(origins="*", allowedHeaders = "*")
+	@CrossOrigin(origins="*", allowedHeaders = "*")	
 	@PostMapping
 	public void addRegistry(@RequestBody RegistryRequestDTO data) {
 		
@@ -44,5 +36,15 @@ public class RegistryController {
 		Registry registro = new Registry(data, sqlHr);
 		registryRepository.save(registro);
 	}
+
+	@CrossOrigin(origins="*", allowedHeaders = "*")
+	@GetMapping
+	public List<RegistryResponseDTO> getRegistry(){
+		
+		List<RegistryResponseDTO> listRegistry = registryRepository.findAll().stream().map(RegistryResponseDTO :: new).toList();
+		return listRegistry;
+		
+	}
+	
 
 }
