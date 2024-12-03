@@ -20,12 +20,11 @@ public class User {
 	private Date dtBirth;
 	private String cpf;
 	
-	
-	public User(String name, String uuid, Date dtBirth, String cpf) {
-		this.name=name;
-		this.uuid=uuid;
-		this.dtBirth=dtBirth;
-		this.cpf=cpf;
+	public User(UserRequestDTO data) {
+		this.name=data.name();
+		this.uuid=data.uuid();
+		this.dtBirth=data.dtBirth();
+		this.cpf=data.cpf();
 	}
 	
 	public  User() {
@@ -72,6 +71,4 @@ public class User {
 		this.userId = userId;
 	}
 	
-	
-
 }
