@@ -19,7 +19,6 @@ import com.trabalho.praticasIot.registry.RegistryRequestDTO;
 import com.trabalho.praticasIot.registry.RegistryResponseDTO;
 import com.trabalho.praticasIot.repository.RegistryRepository;
 
-@CrossOrigin(origins="*", allowedHeaders = "*")
 @RestController
 @RequestMapping("registry")
 public class RegistryController {
